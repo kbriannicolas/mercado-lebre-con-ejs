@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="https://kit.fontawesome.com/7b924e2171.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2? family=Lato:ital,wght@0,100;0,300;1,100&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+
+    <title>Mi primer documento html</title>
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+        <img src="/img/img-home-banner.jpg" alt="" class="banner">
+
+        <main class="main">
+            <section>
+                <header>
+                    <h2>Basado en tu última visita</h2>
+                </header>
+                <div class="divparalosarticles">
+                    <% for(let i=0; i < productos.length; i++) {%>
+                        <article>
+
+                            <img src=<%=productos[i].img %> alt="">
+
+                            <div class="divsection">
+                                <i class="fa-solid fa-truck logoiarticle"></i>
+                                <div class="div2p">
+                                    <p class="pconprecio">
+                                        <%= productos[i].precio %>
+                                    </p>
+                                    <p class="strong">
+                                        <%= productos[i].descuento %>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p><strong class="pstrong">
+                                            <%= productos[i].descripcion%>
+                                        </strong></p>
+                                </div>
+
+                            </div>
+
+                        </article>
+                        <% } %>
+                </div>
+            </section>
+
+            <section>
+                <header>
+                    <h2>Sección de Ofertas</h2>
+                </header>
+                <div class="divparalosarticles">
+                    <% for(let i=0; i < productos.length; i++) {%>
+                        <article>
+
+                            <img src=<%=productos[i].img %> alt="">
+
+                            <div class="divsection">
+                                <i class="fa-solid fa-truck logoiarticle"></i>
+                                <div class="div2p">
+                                    <p class="pconprecio">
+                                        <%= productos[i].precio %>
+                                    </p>
+                                    <p class="strong">
+                                        <%= productos[i].descuento %>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p><strong class="pstrong">
+                                            <%= productos[i].descripcion%>
+                                        </strong></p>
+                                </div>
+
+                            </div>
+
+                        </article>
+                    <% } %>
+                </div>
+            </section>
+        </main>
+
+        <%- include('./partials/footer.ejs') %>
+
+
+</body>
+
+</html>

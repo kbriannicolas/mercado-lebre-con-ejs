@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleslogin.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <script src="https://kit.fontawesome.com/7b924e2171.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2? family=Lato:ital,wght@0,100;0,300;1,100&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <title>ingreso</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %>
+
+    <main>
+        <section class="section-main">
+            <form action="ingreso" method="post" class="create-form-login">
+                <div>
+                    <input type="text" name="nombreusuario" placeholder="Nombre de usuario" required>
+                    <span class="validity"></span>
+                </div>
+                <div>
+                    <input type="password" name="contraseña" placeholder="contraseña" required>
+                    <span class="validity"></span>
+                </div>
+                <div>
+                    <button type="submit" class="enviar"> Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+
+
+</body>
+</html>
